@@ -12,6 +12,7 @@ namespace PlacementPlus_
 {
     public partial class Register : Form
     {
+        Submit submit = new Submit();
         public Register()
         {
             InitializeComponent();
@@ -21,5 +22,15 @@ namespace PlacementPlus_
         {
 
         }
-    }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            if (!txtPassword.Equals(txtPassword2))
+            {
+                MessageBox.Show("Mis Matched Password");
+                //return;
+            }
+            submit.Register(txtEmail.Text, txtPassword.Text);
+		}
+	}
 }
