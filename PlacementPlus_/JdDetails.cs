@@ -12,7 +12,7 @@ namespace PlacementPlus_
 {
     public partial class JdDetails : Form
     {
-        public JdDetails()
+        public JdDetails(int JobId)
         {
             InitializeComponent();
         }
@@ -26,5 +26,10 @@ namespace PlacementPlus_
         {
 
         }
-    }
+
+		private void button4_Click(object sender, EventArgs e)
+		{
+
+		}
+	}
 }
