@@ -72,6 +72,7 @@
 			this.button3.TabIndex = 27;
 			this.button3.Text = "Student";
 			this.button3.UseVisualStyleBackColor = false;
+			this.button3.Click += new System.EventHandler(this.button3_Click);
 			// 
 			// button1
 			// 
@@ -95,6 +96,7 @@
 			this.button6.TabIndex = 29;
 			this.button6.Text = "Request";
 			this.button6.UseVisualStyleBackColor = false;
+			this.button6.Click += new System.EventHandler(this.button6_Click);
 			// 
 			// btnProfile
 			// 
@@ -171,6 +173,7 @@
 			this.panel2.Name = "panel2";
 			this.panel2.Size = new System.Drawing.Size(1376, 632);
 			this.panel2.TabIndex = 32;
+			this.panel2.Paint += new System.Windows.Forms.PaintEventHandler(this.panel2_Paint);
 			// 
 			// button7
 			// 

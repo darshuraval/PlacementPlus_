@@ -31,5 +31,75 @@ namespace PlacementPlus_
             this.Hide();
             register.Show();
 		}
+
+		private void pictureBox2_Click(object sender, EventArgs e)
+		{
+
+		}
+
+		private void pictureBox3_Click(object sender, EventArgs e)
+		{
+
+		}
+
+		private void panel1_Paint(object sender, PaintEventArgs e)
+		{
+
+		}
+
+		private void panel3_Paint(object sender, PaintEventArgs e)
+		{
+
+		}
+
+		private void LoginHere_Click(object sender, EventArgs e)
+		{
+
+		}
+
+		private void button2_Click(object sender, EventArgs e)
+		{
+
+		}
+
+		private void pictureBox1_Click(object sender, EventArgs e)
+		{
+
+		}
+
+		private void txtPassword_TextChanged(object sender, EventArgs e)
+		{
+
+		}
+
+		private void label1_Click(object sender, EventArgs e)
+		{
+
+		}
+
+		private void txtEmail_TextChanged(object sender, EventArgs e)
+		{
+
+		}
+
+		private void UserName_Click(object sender, EventArgs e)
+		{
+
+		}
+
+		private void panel4_Paint(object sender, PaintEventArgs e)
+		{
+
+		}
+
+		private void label2_Click(object sender, EventArgs e)
+		{
+
+		}
+
+		private void panel2_Paint(object sender, PaintEventArgs e)
+		{
+
+		}
 	}
 }

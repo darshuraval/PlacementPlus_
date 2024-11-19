@@ -31,5 +31,34 @@ namespace PlacementPlus_
         {
 
         }
-    }
+
+		private void panel2_Paint(object sender, PaintEventArgs e)
+		{
+
+		}
+
+		private void pictureBox1_Click(object sender, EventArgs e)
+		{
+            Profile p = new Profile();
+            p.Show(); this.Hide();
+		}
+
+		private void button3_Click(object sender, EventArgs e)
+		{
+            Student p = new Student();
+			p.Show(); this.Hide();
+		}
+
+		private void button5_Click(object sender, EventArgs e)
+		{
+            JobDrive p = new JobDrive();
+            p.Show(); this.Hide();
+		}
+
+		private void button6_Click(object sender, EventArgs e)
+		{
+            Request request = new Request();
+            request.Show(); this.Hide();
+		}
+	}
 }

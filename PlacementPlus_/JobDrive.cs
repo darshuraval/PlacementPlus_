@@ -66,5 +66,28 @@ namespace PlacementPlus_
 				}
 			}
 		}
+
+		private void button3_Click(object sender, EventArgs e)
+		{
+			Student student = new Student();
+			student.Show(); this.Hide();
+		}
+
+		private void button5_Click(object sender, EventArgs e)
+		{
+			
+		}
+
+		private void button6_Click(object sender, EventArgs e)
+		{
+			Request r = new Request();
+			r.Show(); this.Hide();
+		}
+
+		private void pictureBox1_Click(object sender, EventArgs e)
+		{
+			Profile p = new Profile();
+			p.Show(); this.Hide();
+		}
 	}
 }

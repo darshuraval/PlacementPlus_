@@ -40,15 +40,15 @@
 			this.UserName = new System.Windows.Forms.Label();
 			this.panel4 = new System.Windows.Forms.Panel();
 			this.label2 = new System.Windows.Forms.Label();
-			this.pictureBox3 = new System.Windows.Forms.PictureBox();
 			this.panel2 = new System.Windows.Forms.Panel();
+			this.pictureBox3 = new System.Windows.Forms.PictureBox();
 			this.pictureBox2 = new System.Windows.Forms.PictureBox();
 			this.pictureBox1 = new System.Windows.Forms.PictureBox();
 			this.panel1.SuspendLayout();
 			this.panel3.SuspendLayout();
 			this.panel4.SuspendLayout();
-			((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
 			this.panel2.SuspendLayout();
+			((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
 			this.SuspendLayout();
@@ -62,6 +62,7 @@
 			this.panel1.Name = "panel1";
 			this.panel1.Size = new System.Drawing.Size(971, 504);
 			this.panel1.TabIndex = 1;
+			this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
 			// 
 			// panel3
 			// 
@@ -79,6 +80,7 @@
 			this.panel3.Name = "panel3";
 			this.panel3.Size = new System.Drawing.Size(499, 504);
 			this.panel3.TabIndex = 1;
+			this.panel3.Paint += new System.Windows.Forms.PaintEventHandler(this.panel3_Paint);
 			// 
 			// LoginHere
 			// 
@@ -89,6 +91,7 @@
 			this.LoginHere.Size = new System.Drawing.Size(156, 33);
 			this.LoginHere.TabIndex = 11;
 			this.LoginHere.Text = "Login Here";
+			this.LoginHere.Click += new System.EventHandler(this.LoginHere_Click);
 			// 
 			// button3
 			// 
@@ -111,6 +114,7 @@
 			this.button2.TabIndex = 9;
 			this.button2.Text = "Don\'t have an account?";
 			this.button2.UseVisualStyleBackColor = true;
+			this.button2.Click += new System.EventHandler(this.button2_Click);
 			// 
 			// button1
 			// 
@@ -134,6 +138,7 @@
 			this.txtPassword.Name = "txtPassword";
 			this.txtPassword.Size = new System.Drawing.Size(427, 43);
 			this.txtPassword.TabIndex = 4;
+			this.txtPassword.TextChanged += new System.EventHandler(this.txtPassword_TextChanged);
 			// 
 			// label1
 			// 
@@ -144,6 +149,7 @@
 			this.label1.Size = new System.Drawing.Size(106, 23);
 			this.label1.TabIndex = 3;
 			this.label1.Text = "Password";
+			this.label1.Click += new System.EventHandler(this.label1_Click);
 			// 
 			// txtEmail
 			// 
@@ -152,6 +158,7 @@
 			this.txtEmail.Name = "txtEmail";
 			this.txtEmail.Size = new System.Drawing.Size(427, 43);
 			this.txtEmail.TabIndex = 2;
+			this.txtEmail.TextChanged += new System.EventHandler(this.txtEmail_TextChanged);
 			// 
 			// UserName
 			// 
@@ -162,6 +169,7 @@
 			this.UserName.Size = new System.Drawing.Size(70, 23);
 			this.UserName.TabIndex = 1;
 			this.UserName.Text = "Email";
+			this.UserName.Click += new System.EventHandler(this.UserName_Click);
 			// 
 			// panel4
 			// 
@@ -172,6 +180,7 @@
 			this.panel4.Name = "panel4";
 			this.panel4.Size = new System.Drawing.Size(499, 59);
 			this.panel4.TabIndex = 0;
+			this.panel4.Paint += new System.Windows.Forms.PaintEventHandler(this.panel4_Paint);
 			// 
 			// label2
 			// 
@@ -182,16 +191,7 @@
 			this.label2.Size = new System.Drawing.Size(247, 45);
 			this.label2.TabIndex = 1;
 			this.label2.Text = "PlacementPlus";
-			// 
-			// pictureBox3
-			// 
-			this.pictureBox3.Image = global::PlacementPlus_.Properties.Resources.images;
-			this.pictureBox3.Location = new System.Drawing.Point(439, 8);
-			this.pictureBox3.Name = "pictureBox3";
-			this.pictureBox3.Size = new System.Drawing.Size(58, 45);
-			this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-			this.pictureBox3.TabIndex = 0;
-			this.pictureBox3.TabStop = false;
+			this.label2.Click += new System.EventHandler(this.label2_Click);
 			// 
 			// panel2
 			// 
@@ -202,6 +202,18 @@
 			this.panel2.Name = "panel2";
 			this.panel2.Size = new System.Drawing.Size(475, 504);
 			this.panel2.TabIndex = 0;
+			this.panel2.Paint += new System.Windows.Forms.PaintEventHandler(this.panel2_Paint);
+			// 
+			// pictureBox3
+			// 
+			this.pictureBox3.Image = global::PlacementPlus_.Properties.Resources.images;
+			this.pictureBox3.Location = new System.Drawing.Point(439, 8);
+			this.pictureBox3.Name = "pictureBox3";
+			this.pictureBox3.Size = new System.Drawing.Size(58, 45);
+			this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+			this.pictureBox3.TabIndex = 0;
+			this.pictureBox3.TabStop = false;
+			this.pictureBox3.Click += new System.EventHandler(this.pictureBox3_Click);
 			// 
 			// pictureBox2
 			// 
@@ -212,6 +224,7 @@
 			this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
 			this.pictureBox2.TabIndex = 1;
 			this.pictureBox2.TabStop = false;
+			this.pictureBox2.Click += new System.EventHandler(this.pictureBox2_Click);
 			// 
 			// pictureBox1
 			// 
@@ -222,6 +235,7 @@
 			this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
 			this.pictureBox1.TabIndex = 0;
 			this.pictureBox1.TabStop = false;
+			this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
 			// 
 			// Login
 			// 
@@ -237,8 +251,8 @@
 			this.panel3.PerformLayout();
 			this.panel4.ResumeLayout(false);
 			this.panel4.PerformLayout();
-			((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
 			this.panel2.ResumeLayout(false);
+			((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
 			((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
 			((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
 			this.ResumeLayout(false);

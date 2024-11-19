@@ -10,35 +10,27 @@ using System.Windows.Forms;
 
 namespace PlacementPlus_
 {
-    public partial class Register : Form
-    {
-        Submit submit = new Submit();
-        public Register()
-        {
-            InitializeComponent();
-        }
+	public partial class Register : Form
+	{
+		public Register()
+		{
+			InitializeComponent();
+		}
 
-        private void button1_Click(object sender, EventArgs e)
-        {
+		private void button3_Click(object sender, EventArgs e)
+		{
+			Login l = new Login();
+			this.Hide();
+			l.Show();
+		}
 
-        }
-
-        private void button1_Click(object sender, EventArgs e)
-        {
-            if (!txtPassword.Equals(txtPassword2))
-            {
-                MessageBox.Show("Mis Matched Password");
-                //return;
-            }
-            submit.Register(txtEmail.Text, txtPassword.Text);
+		private void button1_Click(object sender, EventArgs e)
+		{
+			if(txtPass1.Text == txtPass2.Text)
+			{
+				Submit s = new Submit();
+				s.Register(txtEmail.Text,txtPass1.Text);
+			}
 		}
 	}
-
-        private void button2_Click(object sender, EventArgs e)
-        {
-            Login login = new Login();
-            this.Hide();
-            login.Show();
-        }
-    }
 }

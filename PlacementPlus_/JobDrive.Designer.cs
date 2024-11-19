@@ -54,6 +54,7 @@
 			this.button6.TabIndex = 11;
 			this.button6.Text = "Request";
 			this.button6.UseVisualStyleBackColor = false;
+			this.button6.Click += new System.EventHandler(this.button6_Click);
 			// 
 			// button5
 			// 
@@ -65,6 +66,7 @@
 			this.button5.TabIndex = 10;
 			this.button5.Text = "Job Drive";
 			this.button5.UseVisualStyleBackColor = false;
+			this.button5.Click += new System.EventHandler(this.button5_Click);
 			// 
 			// button3
 			// 
@@ -76,6 +78,7 @@
 			this.button3.TabIndex = 9;
 			this.button3.Text = "Student";
 			this.button3.UseVisualStyleBackColor = false;
+			this.button3.Click += new System.EventHandler(this.button3_Click);
 			// 
 			// button1
 			// 
@@ -122,6 +125,7 @@
 			this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
 			this.pictureBox1.TabIndex = 12;
 			this.pictureBox1.TabStop = false;
+			this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
 			// 
 			// panel2
 			// 

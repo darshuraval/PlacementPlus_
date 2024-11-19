@@ -11,7 +11,7 @@ namespace PlacementPlus_
 	{
 		OpenFileDialog openFileDialog = new OpenFileDialog();
 		Database db = new Database();
-		static string UserEmail = "admin@gmail.com";
+		static string UserEmail = "darahan95580@gmail.com";
 		private string currentImageFileName;
 		private Timer refreshTimer;
 		public Profile()
@@ -204,7 +204,9 @@ namespace PlacementPlus_
 
 		private void btnProfile_Click(object sender, EventArgs e)
 		{
-			LoadUserProfile();
+			Profile profile = new Profile();
+			profile.Show(); this.Hide();
+			//LoadUserProfile();
 		}
 
 		private void button5_Click(object sender, EventArgs e)
@@ -212,6 +214,23 @@ namespace PlacementPlus_
 			JobDrive jobDrive = new JobDrive();
 			this.Hide();
 			jobDrive.Show();
+		}
+
+		private void panel2_Paint(object sender, PaintEventArgs e)
+		{
+
+		}
+
+		private void button3_Click(object sender, EventArgs e)
+		{
+			Student student = new Student();
+			student.Show(); this.Hide();
+		}
+
+		private void button6_Click(object sender, EventArgs e)
+		{
+			Request request = new Request();
+			request.Show(); this.Hide();
 		}
 	}
 }
