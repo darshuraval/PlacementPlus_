@@ -8,7 +8,7 @@ namespace PlacementPlus_
 	public class Submit
 	{
 		private static Database db = new Database();
-
+		public string userEmail;
 		public void Register(string email, string password)
 		{
 			// Hash the password before storing it
@@ -29,6 +29,7 @@ namespace PlacementPlus_
 				Login login = new Login();
 				register.Hide();
 				login.Show();
+				userEmail = email;
 				MessageBox.Show("Registered!");
 			}
 			else
@@ -53,7 +54,7 @@ namespace PlacementPlus_
 				if (VerifyPassword(password, user.Rows[0][3].ToString()))
 				{
 					Login login = new Login();
-					Profile profile = new Profile();
+					Profile profile = new Profile(email);
 					login.Hide();
 					profile.Show();
 					MessageBox.Show("Logged In");

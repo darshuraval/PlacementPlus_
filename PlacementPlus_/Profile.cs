@@ -11,11 +11,13 @@ namespace PlacementPlus_
 	{
 		OpenFileDialog openFileDialog = new OpenFileDialog();
 		Database db = new Database();
-		static string UserEmail = "darahan95580@gmail.com";
+		static string UserEmail;
+		//static string UserEmail = "darahan95580@gmail.com";
 		private string currentImageFileName;
 		private Timer refreshTimer;
-		public Profile()
+		public Profile(string user)
 		{
+			UserEmail = user;
 			InitializeComponent();
 			LoadUserProfile(); // Load the user profile when the form initializes
 		}
@@ -204,14 +206,14 @@ namespace PlacementPlus_
 
 		private void btnProfile_Click(object sender, EventArgs e)
 		{
-			Profile profile = new Profile();
+			Profile profile = new Profile(UserEmail);
 			profile.Show(); this.Hide();
 			//LoadUserProfile();
 		}
 
 		private void button5_Click(object sender, EventArgs e)
 		{
-			JobDrive jobDrive = new JobDrive();
+			JobDrive jobDrive = new JobDrive(UserEmail);
 			this.Hide();
 			jobDrive.Show();
 		}
@@ -223,13 +225,13 @@ namespace PlacementPlus_
 
 		private void button3_Click(object sender, EventArgs e)
 		{
-			Student student = new Student();
+			Student student = new Student(UserEmail);
 			student.Show(); this.Hide();
 		}
 
 		private void button6_Click(object sender, EventArgs e)
 		{
-			Request request = new Request();
+			Request request = new Request(UserEmail);
 			request.Show(); this.Hide();
 		}
 	}

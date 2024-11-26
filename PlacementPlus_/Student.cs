@@ -12,8 +12,10 @@ namespace PlacementPlus_
 {
     public partial class Student : Form
     {
-        public Student()
+        static string user;
+        public Student(string email)
         {
+            user = email;
             InitializeComponent();
         }
 
@@ -39,26 +41,31 @@ namespace PlacementPlus_
 
 		private void pictureBox1_Click(object sender, EventArgs e)
 		{
-            Profile p = new Profile();
+            Profile p = new Profile(user);
             p.Show(); this.Hide();
 		}
 
 		private void button3_Click(object sender, EventArgs e)
 		{
-            Student p = new Student();
+            Student p = new Student(user);
 			p.Show(); this.Hide();
 		}
 
 		private void button5_Click(object sender, EventArgs e)
 		{
-            JobDrive p = new JobDrive();
+            JobDrive p = new JobDrive(user);
             p.Show(); this.Hide();
 		}
 
 		private void button6_Click(object sender, EventArgs e)
 		{
-            Request request = new Request();
+            Request request = new Request(user);
             request.Show(); this.Hide();
+		}
+
+		private void button4_Click(object sender, EventArgs e)
+		{
+
 		}
 	}
 }
