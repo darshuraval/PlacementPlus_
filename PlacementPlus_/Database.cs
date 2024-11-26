@@ -6,7 +6,6 @@ public class Database
 {
 	private string connectionString = "server=localhost;database=PlacementPlus_;user=root;password=;";
 
-	// Executes SQL commands (SELECT or non-SELECT)
 	public (bool success, DataTable data, int affectedRows) Execute(string query, params MySqlParameter[] parameters)
 	{
 		bool success = false;
@@ -22,17 +21,15 @@ public class Database
 
 				try
 				{
-					// Execute SELECT query
 					if (query.TrimStart().StartsWith("SELECT", StringComparison.OrdinalIgnoreCase))
 					{
 						using (MySqlDataAdapter adapter = new MySqlDataAdapter(command))
 						{
 							data = new DataTable();
 							adapter.Fill(data);
-							success = true; // SELECT query executed successfully
+							success = true; // SELECT was successful
 						}
 					}
-					// Execute non-SELECT query (INSERT, UPDATE, DELETE)
 					else
 					{
 						affectedRows = command.ExecuteNonQuery();
@@ -41,10 +38,7 @@ public class Database
 				}
 				catch (Exception ex)
 				{
-					// Log error message
-					Console.WriteLine($"Error executing query: {query}");
-					Console.WriteLine($"Exception: {ex.Message}");
-					// Optionally rethrow or handle the exception more appropriately
+					Console.WriteLine($"Error: {ex.Message}");
 				}
 			}
 		}

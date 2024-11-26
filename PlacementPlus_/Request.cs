@@ -7,40 +7,37 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using static System.Windows.Forms.VisualStyles.VisualStyleElement.ListView;
 
 namespace PlacementPlus_
 {
     public partial class Request : Form
     {
-		static string email;
-        public Request(string user)
+        public Request()
         {
-			email = user;
             InitializeComponent();
         }
 
 		private void button3_Click(object sender, EventArgs e)
 		{
-            Student student = new Student(email);
+            Student student = new Student();
             student.Show(); this.Close();
 		}
 
 		private void button5_Click(object sender, EventArgs e)
 		{
-            JobDrive drive = new JobDrive(email);
+            JobDrive drive = new JobDrive();
             drive.Show(); this.Close();
 		}
 
 		private void button6_Click(object sender, EventArgs e)
 		{
-			Request request = new Request(email);
+			Request request = new Request();
 			request.Show(); this.Close();
 		}
 
 		private void pictureBox1_Click(object sender, EventArgs e)
 		{
-			Profile profile = new Profile(email);
+			Profile profile = new Profile();
 			profile.Show(); this.Close();
 		}
 	}

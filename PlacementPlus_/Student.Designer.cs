@@ -162,7 +162,6 @@
 			this.button4.TabIndex = 9;
 			this.button4.Text = "Add Student";
 			this.button4.UseVisualStyleBackColor = false;
-			this.button4.Click += new System.EventHandler(this.button4_Click);
 			// 
 			// dataGridView1
 			// 
