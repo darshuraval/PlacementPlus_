@@ -8,86 +8,137 @@ namespace PlacementPlus_
 	public partial class JobDrive : Form
 	{
 		Database db = new Database();
-
-		public JobDrive()
+		static string email;
+		public JobDrive(string user)
 		{
+			email = user;
 			InitializeComponent();
-			LoadJobs();
+			LoadJobs(); // Load job data into the DataGridView when the form loads
 		}
 
 		private void LoadJobs()
 		{
-			string query = "SELECT Id, Company_Name, Job_Profile, CTC, Internship, Stipend, Batch, Course, Due_Date FROM jobs"; // Select relevant columns
+			string query = "SELECT Id, Company_Name, Job_Profile, CTC, Internship, Batch, Course, Due_Date FROM jobs"; // Select relevant columns
 			var result = db.Execute(query);
 
 			if (result.success && result.data != null)
 			{
 				dataGridView.DataSource = result.data;
 
-				// Optionally hide the Id column
-				dataGridView.Columns["Id"].Visible = false;
+				dataGridView.Columns["Id"].Visible = false; // Hide the ID column
 
-				// Add button column for "View Details"
-				DataGridViewButtonColumn buttonColumn = new DataGridViewButtonColumn
+				// Add "View Details" button column
+				DataGridViewButtonColumn viewDetailsColumn = new DataGridViewButtonColumn
 				{
-					Name = "Action", // Set the name of the button column
+					Name = "ViewDetails",
 					HeaderText = "Action",
 					Text = "View Details",
 					UseColumnTextForButtonValue = true
 				};
-				dataGridView.Columns.Add(buttonColumn);
+				dataGridView.Columns.Add(viewDetailsColumn);
 
+				// Style the "View Details" button column
+				dataGridView.Columns["ViewDetails"].DefaultCellStyle.BackColor = Color.LightBlue;
+				dataGridView.Columns["ViewDetails"].DefaultCellStyle.ForeColor = Color.Black;
 
-				// Set default cell style for button column
-				dataGridView.Columns["Action"].DefaultCellStyle.BackColor = Color.LightBlue; // Change color
-				dataGridView.Columns["Action"].DefaultCellStyle.ForeColor = Color.Black; // Change text color
+				// Add "Delete" button column
+				DataGridViewButtonColumn deleteColumn = new DataGridViewButtonColumn
+				{
+					Name = "Delete",
+					HeaderText = "Action",
+					Text = "Delete",
+					UseColumnTextForButtonValue = true
+				};
+				dataGridView.Columns.Add(deleteColumn);
+
+				// Style the "Delete" button column
+				dataGridView.Columns["Delete"].DefaultCellStyle.BackColor = Color.LightCoral;
+				dataGridView.Columns["Delete"].DefaultCellStyle.ForeColor = Color.Black;
 			}
 			else
 			{
 				MessageBox.Show("Failed to load job data.");
 			}
 		}
+
 		private void dataGridView_CellContentClick(object sender, DataGridViewCellEventArgs e)
 		{
-			// Check if there are any jobs
+			// Check if there are any rows in the DataGridView
 			if (dataGridView.Rows.Count == 0)
 			{
-				// Display message for no data
 				MessageBox.Show("No job data available.");
 			}
 			else
 			{
-				// Check if the click was on the button column
-				if (e.RowIndex >= 0 && e.ColumnIndex == dataGridView.Columns["Action"].Index)
+				// Check if the clicked column is the "View Details" button column
+				if (e.RowIndex >= 0)
 				{
-					int jobId = (int)dataGridView.Rows[e.RowIndex].Cells["Id"].Value; // Get the job ID
-					JdDetails detailsForm = new JdDetails(jobId);
-					detailsForm.ShowDialog(); // Show details form as a dialog
+					if (e.ColumnIndex == dataGridView.Columns["ViewDetails"].Index)
+					{
+						// Get the JobId from the clicked row
+						int jobId = Convert.ToInt32(dataGridView.Rows[e.RowIndex].Cells["Id"].Value);
+
+						// Create a new instance of the JobDetails form, passing the JobId
+						JdDetails detailsForm = new JdDetails(email, jobId);
+
+						// Show the details form as a dialog
+						detailsForm.ShowDialog();
+					}
+					else if (e.ColumnIndex == dataGridView.Columns["Delete"].Index)
+					{
+						// Handle "Delete" button click
+						int jobId = Convert.ToInt32(dataGridView.Rows[e.RowIndex].Cells["Id"].Value);
+						// Add logic to delete the job
+						// For example: db.Execute("DELETE FROM jobs WHERE Id = @JobId", new MySqlParameter("@JobId", jobId));
+						db.Execute("delete from jobs where Id = " + jobId);
+						MessageBox.Show($"Deleted Job Record, JobId: {jobId}");
+						JobDrive_Load(sender, e);
+					}
 				}
 			}
 		}
 
 		private void button3_Click(object sender, EventArgs e)
 		{
-			Student student = new Student();
-			student.Show(); this.Hide();
+			Student student = new Student(email);
+			student.Show();
+			this.Hide();
 		}
 
 		private void button5_Click(object sender, EventArgs e)
 		{
-			
+			// No code inside the event handler
 		}
 
 		private void button6_Click(object sender, EventArgs e)
 		{
-			Request r = new Request();
-			r.Show(); this.Hide();
+			Request r = new Request(email);
+			r.Show();
+			this.Hide();
 		}
 
 		private void pictureBox1_Click(object sender, EventArgs e)
 		{
-			Profile p = new Profile();
-			p.Show(); this.Hide();
+			Profile p = new Profile(email);
+			p.Show();
+			this.Hide();
+		}
+
+		private void JobDrive_Load(object sender, EventArgs e)
+		{
+			// Any initialization code for the form load can go here
+		}
+
+		private void panel2_Paint(object sender, PaintEventArgs e)
+		{
+
+		}
+
+		private void button2_Click(object sender, EventArgs e)
+		{
+			JdDetails jdDetails = new JdDetails(email, 0);
+			jdDetails.Show();
+			this.Hide();
 		}
 	}
 }
