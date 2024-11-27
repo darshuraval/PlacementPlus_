@@ -70,6 +70,7 @@
 			this.lblJobId = new System.Windows.Forms.Label();
 			this.txtInternship = new System.Windows.Forms.TextBox();
 			this.label10 = new System.Windows.Forms.Label();
+			this.label5 = new System.Windows.Forms.Label();
 			((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
 			this.panel1.SuspendLayout();
 			this.panel2.SuspendLayout();
@@ -161,9 +162,9 @@
 			this.label2.Font = new System.Drawing.Font("Calibri", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
 			this.label2.Location = new System.Drawing.Point(47, 28);
 			this.label2.Name = "label2";
-			this.label2.Size = new System.Drawing.Size(325, 37);
+			this.label2.Size = new System.Drawing.Size(257, 37);
 			this.label2.TabIndex = 3;
-			this.label2.Text = "Job Drive Overview, Id ->";
+			this.label2.Text = "Job Drive Overview";
 			// 
 			// label3
 			// 
@@ -412,6 +413,7 @@
 			// panel2
 			// 
 			this.panel2.BackColor = System.Drawing.Color.Beige;
+			this.panel2.Controls.Add(this.label5);
 			this.panel2.Controls.Add(this.txtDueDate);
 			this.panel2.Controls.Add(this.label12);
 			this.panel2.Controls.Add(this.txtBranch);
@@ -450,7 +452,6 @@
 			this.panel2.Name = "panel2";
 			this.panel2.Size = new System.Drawing.Size(1417, 659);
 			this.panel2.TabIndex = 38;
-			this.panel2.Paint += new System.Windows.Forms.PaintEventHandler(this.panel2_Paint);
 			// 
 			// txtDueDate
 			// 
@@ -459,7 +460,6 @@
 			this.txtDueDate.Name = "txtDueDate";
 			this.txtDueDate.Size = new System.Drawing.Size(289, 39);
 			this.txtDueDate.TabIndex = 52;
-			this.txtDueDate.TextChanged += new System.EventHandler(this.textBox10_TextChanged);
 			// 
 			// label12
 			// 
@@ -470,7 +470,6 @@
 			this.label12.Size = new System.Drawing.Size(80, 24);
 			this.label12.TabIndex = 51;
 			this.label12.Text = "Due Date";
-			this.label12.Click += new System.EventHandler(this.label12_Click);
 			// 
 			// txtBranch
 			// 
@@ -494,7 +493,7 @@
 			// 
 			this.lblJobId.AutoSize = true;
 			this.lblJobId.Font = new System.Drawing.Font("Calibri", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.lblJobId.Location = new System.Drawing.Point(371, 28);
+			this.lblJobId.Location = new System.Drawing.Point(380, 28);
 			this.lblJobId.Name = "lblJobId";
 			this.lblJobId.Size = new System.Drawing.Size(83, 37);
 			this.lblJobId.TabIndex = 48;
@@ -517,6 +516,16 @@
 			this.label10.Size = new System.Drawing.Size(147, 24);
 			this.label10.TabIndex = 46;
 			this.label10.Text = "Internship Duration";
+			// 
+			// label5
+			// 
+			this.label5.AutoSize = true;
+			this.label5.Font = new System.Drawing.Font("Calibri", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.label5.Location = new System.Drawing.Point(300, 28);
+			this.label5.Name = "label5";
+			this.label5.Size = new System.Drawing.Size(90, 37);
+			this.label5.TabIndex = 53;
+			this.label5.Text = ", ID ->";
 			// 
 			// JdDetails
 			// 
@@ -581,5 +590,6 @@
 		private System.Windows.Forms.Label label11;
 		private System.Windows.Forms.TextBox txtDueDate;
 		private System.Windows.Forms.Label label12;
+		private System.Windows.Forms.Label label5;
 	}
 }

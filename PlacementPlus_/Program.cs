@@ -19,7 +19,7 @@ namespace PlacementPlus_
 			}
 			else
 			{
-				Application.Run(new Profile(email));
+				//Application.Run(new Profile());
 			}
 		}
 	}

@@ -22,7 +22,13 @@ namespace PlacementPlus_
 		{
             string email = txtEmail.Text;
             string password = txtPassword.Text;
-            submit.Login(email, password);
+            if(submit.Login(email, password))
+			{
+				Profile profile = new Profile(email);
+				profile.Show();
+				MessageBox.Show("Logged In");
+				this.Hide();
+			}
 		}
 
 		private void button3_Click(object sender, EventArgs e)

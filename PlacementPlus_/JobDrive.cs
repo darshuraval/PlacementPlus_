@@ -77,12 +77,11 @@ namespace PlacementPlus_
 					{
 						// Get the JobId from the clicked row
 						int jobId = Convert.ToInt32(dataGridView.Rows[e.RowIndex].Cells["Id"].Value);
-
 						// Create a new instance of the JobDetails form, passing the JobId
 						JdDetails detailsForm = new JdDetails(email, jobId);
-
+						this.Hide();
 						// Show the details form as a dialog
-						detailsForm.ShowDialog();
+						detailsForm.Show();
 					}
 					else if (e.ColumnIndex == dataGridView.Columns["Delete"].Index)
 					{
@@ -92,7 +91,7 @@ namespace PlacementPlus_
 						// For example: db.Execute("DELETE FROM jobs WHERE Id = @JobId", new MySqlParameter("@JobId", jobId));
 						db.Execute("delete from jobs where Id = " + jobId);
 						MessageBox.Show($"Deleted Job Record, JobId: {jobId}");
-						JobDrive_Load(sender, e);
+						LoadJobs();
 					}
 				}
 			}

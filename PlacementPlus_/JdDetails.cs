@@ -24,9 +24,12 @@ namespace PlacementPlus_
 			if(jobId == 0)
 			{
 				btnSave.Text = "Add Job";
+				lblJobId.Visible = false;
+
 			}
 			else
 			{
+				LoadJobDetails();
 				btnSave.Text = "Save Changes";
 			}
 		}
@@ -75,22 +78,6 @@ namespace PlacementPlus_
 		}
 
 
-		// Clean up any empty methods if not needed
-		private void textBox10_TextChanged(object sender, EventArgs e)
-		{
-			// Empty method. Remove if not required.
-		}
-
-		private void label12_Click(object sender, EventArgs e)
-		{
-			// Empty method. Remove if not required.
-		}
-
-		private void panel2_Paint(object sender, PaintEventArgs e)
-		{
-			// Empty method. Remove if not required.
-		}
-
 		private void button2_Click(object sender, EventArgs e)
 		{
 			JobDrive jd = new JobDrive(email);
@@ -100,7 +87,51 @@ namespace PlacementPlus_
 
 		private void btnSave_Click(object sender, EventArgs e)
 		{
+			string companyName = txtCompanyName.Text;
+			string companyURL = txtCompanyURL.Text;
+			string jobProfile = txtJobProfile.Text;
+			string CTC = txtCTC.Text;
+			string internship = txtInternship.Text;
+			string stipend = txtStipend.Text;
+			string jobLocation = txtJobLocation.Text;
+			string batch = txtBatch.Text;
+			string course = txtBranch.Text;
+			
+			string DriveDate = txtDriveDate.Text;
+			string DriveLocation = txtDriveLocation.Text;
+			string DueDate = txtDueDate.Text;
+			
+			string PersonName = txtPersonName.Text;
+			string PersonMobile = txtPersonMobile.Text;
 
+			if (btnSave.Text == "Add Job")
+			{
+				if(new Submit().AddJob("add",companyName, companyURL, jobProfile, CTC, internship, stipend, jobLocation, batch, course, DriveDate, DriveLocation, DueDate, PersonName, PersonMobile))
+				{
+					MessageBox.Show("Job Added");
+					this.Hide();
+					JobDrive jd = new JobDrive(email);
+					jd.Show();
+
+				}
+				else
+				{
+					MessageBox.Show("Job Adding Error");
+				}
+			}
+			else if(btnSave.Text == "Save Changes"){
+				if (new Submit().AddJob("update", companyName, companyURL, jobProfile, CTC, internship, stipend, jobLocation, batch, course, DriveDate, DriveLocation, DueDate, PersonName, PersonMobile))
+				{
+					MessageBox.Show("Job Updated");
+					this.Hide();
+					JobDrive jd = new JobDrive(email);
+					jd.Show();
+				}
+				else
+				{
+					MessageBox.Show("Job Updating Error");
+				}
+			}
 		}
 	}
 }
