@@ -133,5 +133,22 @@ namespace PlacementPlus_
 			return result.success;
 		}
 
+		public bool AddStudent(string query, MySqlParameter[] parameters)
+		{
+			try
+			{
+				// Assuming db is a class with an Execute method
+				bool result = db.Execute(query, parameters).success;
+				return result;
+			}
+			catch (Exception ex)
+			{
+				// Log the error or show the exception message
+				MessageBox.Show("Execution Error: " + ex.Message);
+				return false;
+			}
+		}
+
+
 	}
 }

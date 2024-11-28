@@ -38,13 +38,6 @@
 			this.panel2 = new System.Windows.Forms.Panel();
 			this.button4 = new System.Windows.Forms.Button();
 			this.dataGridView1 = new System.Windows.Forms.DataGridView();
-			this.StudentName = new System.Windows.Forms.DataGridViewTextBoxColumn();
-			this.CollegeName = new System.Windows.Forms.DataGridViewTextBoxColumn();
-			this.StudentStream = new System.Windows.Forms.DataGridViewTextBoxColumn();
-			this.EnrollNo = new System.Windows.Forms.DataGridViewTextBoxColumn();
-			this.Status = new System.Windows.Forms.DataGridViewTextBoxColumn();
-			this.Action = new System.Windows.Forms.DataGridViewTextBoxColumn();
-			this.ViewDetails = new System.Windows.Forms.DataGridViewTextBoxColumn();
 			this.label2 = new System.Windows.Forms.Label();
 			this.panel1.SuspendLayout();
 			((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -168,72 +161,15 @@
 			// 
 			this.dataGridView1.BackgroundColor = System.Drawing.SystemColors.Window;
 			this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-			this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.StudentName,
-            this.CollegeName,
-            this.StudentStream,
-            this.EnrollNo,
-            this.Status,
-            this.Action,
-            this.ViewDetails});
 			this.dataGridView1.GridColor = System.Drawing.SystemColors.ButtonHighlight;
-			this.dataGridView1.Location = new System.Drawing.Point(213, 93);
+			this.dataGridView1.Location = new System.Drawing.Point(96, 93);
 			this.dataGridView1.Name = "dataGridView1";
 			this.dataGridView1.RowHeadersWidth = 51;
 			this.dataGridView1.RowTemplate.Height = 24;
-			this.dataGridView1.Size = new System.Drawing.Size(930, 353);
+			this.dataGridView1.Size = new System.Drawing.Size(1047, 357);
 			this.dataGridView1.TabIndex = 1;
 			this.dataGridView1.VirtualMode = true;
-			this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick_1);
-			// 
-			// StudentName
-			// 
-			this.StudentName.HeaderText = "Student Name";
-			this.StudentName.MinimumWidth = 6;
-			this.StudentName.Name = "StudentName";
-			this.StudentName.Width = 125;
-			// 
-			// CollegeName
-			// 
-			this.CollegeName.HeaderText = "College/University Name";
-			this.CollegeName.MinimumWidth = 6;
-			this.CollegeName.Name = "CollegeName";
-			this.CollegeName.Width = 125;
-			// 
-			// StudentStream
-			// 
-			this.StudentStream.HeaderText = "StudentStream";
-			this.StudentStream.MinimumWidth = 6;
-			this.StudentStream.Name = "StudentStream";
-			this.StudentStream.Width = 125;
-			// 
-			// EnrollNo
-			// 
-			this.EnrollNo.HeaderText = "EnrollmentNo";
-			this.EnrollNo.MinimumWidth = 6;
-			this.EnrollNo.Name = "EnrollNo";
-			this.EnrollNo.Width = 125;
-			// 
-			// Status
-			// 
-			this.Status.HeaderText = "Status";
-			this.Status.MinimumWidth = 6;
-			this.Status.Name = "Status";
-			this.Status.Width = 125;
-			// 
-			// Action
-			// 
-			this.Action.HeaderText = "Action";
-			this.Action.MinimumWidth = 6;
-			this.Action.Name = "Action";
-			this.Action.Width = 125;
-			// 
-			// ViewDetails
-			// 
-			this.ViewDetails.HeaderText = "ViewDetails";
-			this.ViewDetails.MinimumWidth = 6;
-			this.ViewDetails.Name = "ViewDetails";
-			this.ViewDetails.Width = 125;
+			this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
 			// 
 			// label2
 			// 
@@ -277,14 +213,7 @@
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.DataGridView dataGridView1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn StudentName;
-        private System.Windows.Forms.DataGridViewTextBoxColumn CollegeName;
-        private System.Windows.Forms.DataGridViewTextBoxColumn StudentStream;
-        private System.Windows.Forms.DataGridViewTextBoxColumn EnrollNo;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Status;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Action;
-        private System.Windows.Forms.DataGridViewTextBoxColumn ViewDetails;
         private System.Windows.Forms.Button button4;
-    }
+	}
 }
 
