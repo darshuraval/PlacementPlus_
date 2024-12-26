@@ -206,9 +206,8 @@ namespace PlacementPlus_
 
 		private void btnProfile_Click(object sender, EventArgs e)
 		{
-			Profile profile = new Profile(UserEmail);
-			profile.Show(); this.Hide();
-			//LoadUserProfile();
+			Profile p = new Profile(UserEmail);
+			p.Show(); this.Hide();
 		}
 
 		private void button5_Click(object sender, EventArgs e)
@@ -229,10 +228,11 @@ namespace PlacementPlus_
 			student.Show(); this.Hide();
 		}
 
-		private void button6_Click(object sender, EventArgs e)
+		private void button1_Click(object sender, EventArgs e)
 		{
-			Request request = new Request(UserEmail);
-			request.Show(); this.Hide();
+			this.Hide();
+			Home h = new Home(UserEmail);
+			h.Show();
 		}
 	}
 }

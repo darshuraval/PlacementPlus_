@@ -133,5 +133,18 @@ namespace PlacementPlus_
 				}
 			}
 		}
+
+		private void button1_Click(object sender, EventArgs e)
+		{
+			this.Hide();
+			Home h = new Home(email);
+			h.Show();
+		}
+
+		private void pictureBox1_Click(object sender, EventArgs e)
+		{
+			Profile p = new Profile(email);
+			p.Show(); this.Hide();
+		}
 	}
 }

@@ -48,12 +48,6 @@ namespace PlacementPlus_
             p.Show(); this.Hide();
 		}
 
-		private void button6_Click(object sender, EventArgs e)
-		{
-            Request request = new Request(user);
-            request.Show(); this.Hide();
-		}
-
 		private void button4_Click(object sender, EventArgs e)
 		{
 			AddStudent student = new AddStudent(user, 0);
@@ -135,6 +129,13 @@ namespace PlacementPlus_
 					}
 				}
 			}
+		}
+
+		private void button1_Click(object sender, EventArgs e)
+		{
+			this.Hide();
+			Home h = new Home(user);
+			h.Show();
 		}
 	}
 }

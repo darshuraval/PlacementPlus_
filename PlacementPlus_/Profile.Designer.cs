@@ -30,7 +30,6 @@
         {
 			this.button3 = new System.Windows.Forms.Button();
 			this.button1 = new System.Windows.Forms.Button();
-			this.button6 = new System.Windows.Forms.Button();
 			this.btnProfile = new System.Windows.Forms.PictureBox();
 			this.Logo = new System.Windows.Forms.Label();
 			this.button5 = new System.Windows.Forms.Button();
@@ -66,7 +65,7 @@
 			// 
 			this.button3.BackColor = System.Drawing.Color.Orange;
 			this.button3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.button3.Location = new System.Drawing.Point(874, 28);
+			this.button3.Location = new System.Drawing.Point(1093, 28);
 			this.button3.Name = "button3";
 			this.button3.Size = new System.Drawing.Size(87, 46);
 			this.button3.TabIndex = 27;
@@ -78,25 +77,13 @@
 			// 
 			this.button1.BackColor = System.Drawing.Color.Orange;
 			this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.button1.Location = new System.Drawing.Point(761, 28);
+			this.button1.Location = new System.Drawing.Point(980, 28);
 			this.button1.Name = "button1";
 			this.button1.Size = new System.Drawing.Size(77, 46);
 			this.button1.TabIndex = 26;
 			this.button1.Text = "Home";
 			this.button1.UseVisualStyleBackColor = false;
-			// 
-			// button6
-			// 
-			this.button6.BackColor = System.Drawing.Color.Orange;
-			this.button6.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.button6.Location = new System.Drawing.Point(1137, 26);
-			this.button6.Name = "button6";
-			this.button6.Padding = new System.Windows.Forms.Padding(2, 5, 8, 5);
-			this.button6.Size = new System.Drawing.Size(112, 46);
-			this.button6.TabIndex = 29;
-			this.button6.Text = "Request";
-			this.button6.UseVisualStyleBackColor = false;
-			this.button6.Click += new System.EventHandler(this.button6_Click);
+			this.button1.Click += new System.EventHandler(this.button1_Click);
 			// 
 			// btnProfile
 			// 
@@ -124,7 +111,7 @@
 			// 
 			this.button5.BackColor = System.Drawing.Color.Orange;
 			this.button5.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.button5.Location = new System.Drawing.Point(996, 27);
+			this.button5.Location = new System.Drawing.Point(1215, 27);
 			this.button5.Name = "button5";
 			this.button5.Size = new System.Drawing.Size(112, 46);
 			this.button5.TabIndex = 28;
@@ -139,7 +126,6 @@
 			this.panel1.Controls.Add(this.button5);
 			this.panel1.Controls.Add(this.button1);
 			this.panel1.Controls.Add(this.Logo);
-			this.panel1.Controls.Add(this.button6);
 			this.panel1.Controls.Add(this.btnProfile);
 			this.panel1.Location = new System.Drawing.Point(2, 1);
 			this.panel1.Name = "panel1";
@@ -392,7 +378,6 @@
 
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button6;
         private System.Windows.Forms.PictureBox btnProfile;
         private System.Windows.Forms.Label Logo;
         private System.Windows.Forms.Button button5;

@@ -5,7 +5,7 @@ namespace PlacementPlus_
 {
 	internal static class Program
 	{
-		public static bool Is_Login = true; // Default to not logged in
+		public static bool Is_Login = false; // Default to not logged in
 		public static Database db = new Database();
 		[STAThread]
 		static void Main()
@@ -19,7 +19,7 @@ namespace PlacementPlus_
 			}
 			else
 			{
-				Application.Run(new Profile("yash@gmail.com"));
+				Application.Run(new Home("yash@gmail.com"));
 			}
 		}
 	}

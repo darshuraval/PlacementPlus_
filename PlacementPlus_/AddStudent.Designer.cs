@@ -29,13 +29,13 @@
         private void InitializeComponent()
         {
 			this.Logo = new System.Windows.Forms.Label();
-			this.button6 = new System.Windows.Forms.Button();
 			this.button3 = new System.Windows.Forms.Button();
 			this.button5 = new System.Windows.Forms.Button();
 			this.button1 = new System.Windows.Forms.Button();
 			this.panel1 = new System.Windows.Forms.Panel();
 			this.pictureBox1 = new System.Windows.Forms.PictureBox();
 			this.panel2 = new System.Windows.Forms.Panel();
+			this.btnSubmit = new System.Windows.Forms.Button();
 			this.txtResume = new System.Windows.Forms.TextBox();
 			this.txtLastMark = new System.Windows.Forms.TextBox();
 			this.label12 = new System.Windows.Forms.Label();
@@ -78,7 +78,6 @@
 			this.fileSystemWatcher1 = new System.IO.FileSystemWatcher();
 			this.fileSystemWatcher2 = new System.IO.FileSystemWatcher();
 			this.saveFileDialog1 = new System.Windows.Forms.SaveFileDialog();
-			this.btnSubmit = new System.Windows.Forms.Button();
 			this.panel1.SuspendLayout();
 			((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
 			this.panel2.SuspendLayout();
@@ -97,50 +96,41 @@
 			this.Logo.TabIndex = 13;
 			this.Logo.Text = "Placement Plus";
 			// 
-			// button6
-			// 
-			this.button6.BackColor = System.Drawing.Color.Orange;
-			this.button6.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.button6.Location = new System.Drawing.Point(1121, 21);
-			this.button6.Name = "button6";
-			this.button6.Padding = new System.Windows.Forms.Padding(2, 5, 8, 5);
-			this.button6.Size = new System.Drawing.Size(122, 49);
-			this.button6.TabIndex = 17;
-			this.button6.Text = "Request";
-			this.button6.UseVisualStyleBackColor = false;
-			// 
 			// button3
 			// 
 			this.button3.BackColor = System.Drawing.Color.Orange;
 			this.button3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.button3.Location = new System.Drawing.Point(858, 23);
+			this.button3.Location = new System.Drawing.Point(1080, 21);
 			this.button3.Name = "button3";
 			this.button3.Size = new System.Drawing.Size(97, 49);
 			this.button3.TabIndex = 15;
 			this.button3.Text = "Student";
 			this.button3.UseVisualStyleBackColor = false;
+			this.button3.Click += new System.EventHandler(this.button3_Click);
 			// 
 			// button5
 			// 
 			this.button5.BackColor = System.Drawing.Color.Orange;
 			this.button5.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.button5.Location = new System.Drawing.Point(980, 22);
+			this.button5.Location = new System.Drawing.Point(1202, 20);
 			this.button5.Name = "button5";
 			this.button5.Size = new System.Drawing.Size(122, 49);
 			this.button5.TabIndex = 16;
 			this.button5.Text = "Job Drive";
 			this.button5.UseVisualStyleBackColor = false;
+			this.button5.Click += new System.EventHandler(this.button5_Click);
 			// 
 			// button1
 			// 
 			this.button1.BackColor = System.Drawing.Color.Orange;
 			this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.button1.Location = new System.Drawing.Point(745, 23);
+			this.button1.Location = new System.Drawing.Point(967, 21);
 			this.button1.Name = "button1";
 			this.button1.Size = new System.Drawing.Size(87, 49);
 			this.button1.TabIndex = 14;
 			this.button1.Text = "Home";
 			this.button1.UseVisualStyleBackColor = false;
+			this.button1.Click += new System.EventHandler(this.button1_Click);
 			// 
 			// panel1
 			// 
@@ -150,12 +140,10 @@
 			this.panel1.Controls.Add(this.button5);
 			this.panel1.Controls.Add(this.Logo);
 			this.panel1.Controls.Add(this.button3);
-			this.panel1.Controls.Add(this.button6);
 			this.panel1.Location = new System.Drawing.Point(8, 4);
 			this.panel1.Name = "panel1";
 			this.panel1.Size = new System.Drawing.Size(1440, 88);
 			this.panel1.TabIndex = 19;
-			this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
 			// 
 			// pictureBox1
 			// 
@@ -166,6 +154,7 @@
 			this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
 			this.pictureBox1.TabIndex = 18;
 			this.pictureBox1.TabStop = false;
+			this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
 			// 
 			// panel2
 			// 
@@ -214,7 +203,19 @@
 			this.panel2.Name = "panel2";
 			this.panel2.Size = new System.Drawing.Size(1440, 653);
 			this.panel2.TabIndex = 21;
-			this.panel2.Paint += new System.Windows.Forms.PaintEventHandler(this.panel2_Paint);
+			// 
+			// btnSubmit
+			// 
+			this.btnSubmit.BackColor = System.Drawing.Color.Black;
+			this.btnSubmit.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.btnSubmit.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+			this.btnSubmit.Location = new System.Drawing.Point(691, 528);
+			this.btnSubmit.Name = "btnSubmit";
+			this.btnSubmit.Size = new System.Drawing.Size(168, 49);
+			this.btnSubmit.TabIndex = 54;
+			this.btnSubmit.Text = "Add Student";
+			this.btnSubmit.UseVisualStyleBackColor = false;
+			this.btnSubmit.Click += new System.EventHandler(this.button2_Click);
 			// 
 			// txtResume
 			// 
@@ -584,19 +585,6 @@
 			this.fileSystemWatcher2.EnableRaisingEvents = true;
 			this.fileSystemWatcher2.SynchronizingObject = this;
 			// 
-			// btnSubmit
-			// 
-			this.btnSubmit.BackColor = System.Drawing.Color.Black;
-			this.btnSubmit.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.btnSubmit.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-			this.btnSubmit.Location = new System.Drawing.Point(691, 528);
-			this.btnSubmit.Name = "btnSubmit";
-			this.btnSubmit.Size = new System.Drawing.Size(168, 49);
-			this.btnSubmit.TabIndex = 54;
-			this.btnSubmit.Text = "Add Student";
-			this.btnSubmit.UseVisualStyleBackColor = false;
-			this.btnSubmit.Click += new System.EventHandler(this.button2_Click);
-			// 
 			// AddStudent
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -622,7 +610,6 @@
 
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Label Logo;
-        private System.Windows.Forms.Button button6;
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Button button5;
         private System.Windows.Forms.Button button1;

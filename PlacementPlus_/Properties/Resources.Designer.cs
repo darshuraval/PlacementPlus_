@@ -63,6 +63,16 @@ namespace PlacementPlus_.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap _29493 {
+            get {
+                object obj = ResourceManager.GetObject("29493", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap _lock {
             get {
                 object obj = ResourceManager.GetObject("lock", resourceCulture);
@@ -156,6 +166,16 @@ namespace PlacementPlus_.Properties {
         internal static System.Drawing.Bitmap user_avatar {
             get {
                 object obj = ResourceManager.GetObject("user-avatar", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap WhatsApp_Image_2024_11_28_at_14_18_29_d8fdf7e3 {
+            get {
+                object obj = ResourceManager.GetObject("WhatsApp Image 2024-11-28 at 14.18.29_d8fdf7e3", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

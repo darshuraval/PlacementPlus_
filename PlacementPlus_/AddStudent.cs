@@ -143,16 +143,6 @@ namespace PlacementPlus_
 			stud.Show();
 		}
 
-		private void panel1_Paint(object sender, PaintEventArgs e)
-		{
-
-		}
-
-		private void panel2_Paint(object sender, PaintEventArgs e)
-		{
-
-		}
-
 		private void AddStudent_Load(object sender, EventArgs e)
 		{
 			if (id != 0)
@@ -160,6 +150,33 @@ namespace PlacementPlus_
 				LoadStudent(id);
 				btnSubmit.Text = "Save Changes";
 			}
+		}
+
+		private void button5_Click(object sender, EventArgs e)
+		{
+			this.Hide();
+			JobDrive jd = new JobDrive(email);
+			jd.Show();
+		}
+
+		private void button3_Click(object sender, EventArgs e)
+		{
+			this.Hide();
+			Student st = new Student(email);
+			st.Show();
+		}
+
+		private void button1_Click(object sender, EventArgs e)
+		{
+			this.Hide();
+			Home h = new Home(email);
+			h.Show();
+		}
+
+		private void pictureBox1_Click(object sender, EventArgs e)
+		{
+			Profile p = new Profile(email);
+			p.Show(); this.Hide();
 		}
 	}
 }

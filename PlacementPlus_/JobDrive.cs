@@ -109,13 +109,6 @@ namespace PlacementPlus_
 			// No code inside the event handler
 		}
 
-		private void button6_Click(object sender, EventArgs e)
-		{
-			Request r = new Request(email);
-			r.Show();
-			this.Hide();
-		}
-
 		private void pictureBox1_Click(object sender, EventArgs e)
 		{
 			Profile p = new Profile(email);
@@ -138,6 +131,13 @@ namespace PlacementPlus_
 			JdDetails jdDetails = new JdDetails(email, 0);
 			jdDetails.Show();
 			this.Hide();
+		}
+
+		private void button1_Click(object sender, EventArgs e)
+		{
+			this.Hide();
+			Home h = new Home(email);
+			h.Show();
 		}
 	}
 }

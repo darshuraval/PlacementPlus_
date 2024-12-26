@@ -41,10 +41,8 @@ public class Database
 				}
 				catch (Exception ex)
 				{
-					// Log error message
 					Console.WriteLine($"Error executing query: {query}");
 					Console.WriteLine($"Exception: {ex.Message}");
-					// Optionally rethrow or handle the exception more appropriately
 				}
 			}
 		}

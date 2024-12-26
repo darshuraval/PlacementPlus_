@@ -32,7 +32,6 @@
 			this.button5 = new System.Windows.Forms.Button();
 			this.button1 = new System.Windows.Forms.Button();
 			this.Logo = new System.Windows.Forms.Label();
-			this.button6 = new System.Windows.Forms.Button();
 			this.pictureBox1 = new System.Windows.Forms.PictureBox();
 			this.panel1 = new System.Windows.Forms.Panel();
 			this.label2 = new System.Windows.Forms.Label();
@@ -63,6 +62,7 @@
 			this.btnSave = new System.Windows.Forms.Button();
 			this.button2 = new System.Windows.Forms.Button();
 			this.panel2 = new System.Windows.Forms.Panel();
+			this.label5 = new System.Windows.Forms.Label();
 			this.txtDueDate = new System.Windows.Forms.TextBox();
 			this.label12 = new System.Windows.Forms.Label();
 			this.txtBranch = new System.Windows.Forms.TextBox();
@@ -70,7 +70,6 @@
 			this.lblJobId = new System.Windows.Forms.Label();
 			this.txtInternship = new System.Windows.Forms.TextBox();
 			this.label10 = new System.Windows.Forms.Label();
-			this.label5 = new System.Windows.Forms.Label();
 			((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
 			this.panel1.SuspendLayout();
 			this.panel2.SuspendLayout();
@@ -80,7 +79,7 @@
 			// 
 			this.button3.BackColor = System.Drawing.Color.Orange;
 			this.button3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.button3.Location = new System.Drawing.Point(882, 29);
+			this.button3.Location = new System.Drawing.Point(1089, 28);
 			this.button3.Name = "button3";
 			this.button3.Size = new System.Drawing.Size(87, 46);
 			this.button3.TabIndex = 33;
@@ -91,7 +90,7 @@
 			// 
 			this.button5.BackColor = System.Drawing.Color.Orange;
 			this.button5.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.button5.Location = new System.Drawing.Point(1004, 28);
+			this.button5.Location = new System.Drawing.Point(1211, 27);
 			this.button5.Name = "button5";
 			this.button5.Size = new System.Drawing.Size(112, 46);
 			this.button5.TabIndex = 34;
@@ -102,12 +101,13 @@
 			// 
 			this.button1.BackColor = System.Drawing.Color.Orange;
 			this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.button1.Location = new System.Drawing.Point(769, 29);
+			this.button1.Location = new System.Drawing.Point(976, 28);
 			this.button1.Name = "button1";
 			this.button1.Size = new System.Drawing.Size(77, 46);
 			this.button1.TabIndex = 32;
 			this.button1.Text = "Home";
 			this.button1.UseVisualStyleBackColor = false;
+			this.button1.Click += new System.EventHandler(this.button1_Click);
 			// 
 			// Logo
 			// 
@@ -120,18 +120,6 @@
 			this.Logo.TabIndex = 31;
 			this.Logo.Text = "Placement Plus";
 			// 
-			// button6
-			// 
-			this.button6.BackColor = System.Drawing.Color.Orange;
-			this.button6.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.button6.Location = new System.Drawing.Point(1145, 27);
-			this.button6.Name = "button6";
-			this.button6.Padding = new System.Windows.Forms.Padding(2, 5, 8, 5);
-			this.button6.Size = new System.Drawing.Size(112, 46);
-			this.button6.TabIndex = 35;
-			this.button6.Text = "Request";
-			this.button6.UseVisualStyleBackColor = false;
-			// 
 			// pictureBox1
 			// 
 			this.pictureBox1.Image = global::PlacementPlus_.Properties.Resources.images__5_;
@@ -141,6 +129,7 @@
 			this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
 			this.pictureBox1.TabIndex = 36;
 			this.pictureBox1.TabStop = false;
+			this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
 			// 
 			// panel1
 			// 
@@ -148,7 +137,6 @@
 			this.panel1.Controls.Add(this.button3);
 			this.panel1.Controls.Add(this.pictureBox1);
 			this.panel1.Controls.Add(this.button5);
-			this.panel1.Controls.Add(this.button6);
 			this.panel1.Controls.Add(this.button1);
 			this.panel1.Controls.Add(this.Logo);
 			this.panel1.Location = new System.Drawing.Point(3, 2);
@@ -453,6 +441,16 @@
 			this.panel2.Size = new System.Drawing.Size(1417, 659);
 			this.panel2.TabIndex = 38;
 			// 
+			// label5
+			// 
+			this.label5.AutoSize = true;
+			this.label5.Font = new System.Drawing.Font("Calibri", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.label5.Location = new System.Drawing.Point(300, 28);
+			this.label5.Name = "label5";
+			this.label5.Size = new System.Drawing.Size(90, 37);
+			this.label5.TabIndex = 53;
+			this.label5.Text = ", ID ->";
+			// 
 			// txtDueDate
 			// 
 			this.txtDueDate.Location = new System.Drawing.Point(1068, 121);
@@ -517,16 +515,6 @@
 			this.label10.TabIndex = 46;
 			this.label10.Text = "Internship Duration";
 			// 
-			// label5
-			// 
-			this.label5.AutoSize = true;
-			this.label5.Font = new System.Drawing.Font("Calibri", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.label5.Location = new System.Drawing.Point(300, 28);
-			this.label5.Name = "label5";
-			this.label5.Size = new System.Drawing.Size(90, 37);
-			this.label5.TabIndex = 53;
-			this.label5.Text = ", ID ->";
-			// 
 			// JdDetails
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -552,7 +540,6 @@
         private System.Windows.Forms.Button button5;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Label Logo;
-        private System.Windows.Forms.Button button6;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Panel panel1;
 		private System.Windows.Forms.Label label2;
